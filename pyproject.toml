@@ -1,0 +1,38 @@
+[project]
+name = "vericryx"
+version = "0.1.0"
+description = "AI-powered Payment Verification & Fraud Intelligence Platform"
+authors = [{ name = "Susanta" }]
+requires-python = ">=3.11"
+
+dependencies = [
+    "fastapi",
+    "uvicorn",
+    "pydantic",
+    "pydantic-settings",
+    "numpy",
+    "pandas",
+    "scikit-learn",
+    "xgboost",
+    "sqlalchemy",
+    "psycopg2-binary",
+    "httpx"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "ruff",
+    "black",
+    "pre-commit"
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
